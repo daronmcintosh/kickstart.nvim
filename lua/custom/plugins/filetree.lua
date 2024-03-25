@@ -1,6 +1,6 @@
 return {
   'nvim-neo-tree/neo-tree.nvim',
-  version = '*',
+  branch = 'v3.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-tree/nvim-web-devicons',
@@ -14,8 +14,9 @@ return {
           show_hidden_count = true,
           hide_dotfiles = false,
           hide_gitignored = true,
-          hide_by_name = {
+          never_show = {
             '.git',
+            'node_modules',
             '.DS_Store',
           },
         },
