@@ -125,6 +125,7 @@ return {
     end,
   },
   {
+    -- TODO: add format on save by following: https://github.com/nvimtools/none-ls.nvim/wiki/Formatting-on-save
     'nvimtools/none-ls.nvim',
     config = function()
       local null_ls = require 'null-ls'
