@@ -22,7 +22,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.have_nerd_font = true
 
 require('lazy').setup({
-  { import = 'custom.plugins' },
+  { import = 'plugins' },
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
