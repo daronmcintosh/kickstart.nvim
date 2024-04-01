@@ -92,6 +92,7 @@ return {
         yamlls = {},
         prettierd = {},
         actionlint = {},
+        terraformls = {},
         gopls = {},
         tsserver = {},
         lua_ls = {
