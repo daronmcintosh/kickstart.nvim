@@ -20,6 +20,10 @@ return {
             '.DS_Store',
           },
         },
+        follow_current_file = {
+          enabled = true,
+          leave_dirs_open = false,
+        },
       },
       -- see: https://github.com/nvim-neo-tree/neo-tree.nvim/discussions/370#discussioncomment-4144005
       -- TODO: integrate with telescope for menu and actions
