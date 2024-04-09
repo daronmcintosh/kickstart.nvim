@@ -126,7 +126,6 @@ return {
     end,
   },
   {
-    -- TODO: add format on save by following: https://github.com/nvimtools/none-ls.nvim/wiki/Formatting-on-save
     'nvimtools/none-ls.nvim',
     config = function()
       local null_ls = require 'null-ls'
@@ -140,22 +139,27 @@ return {
           null_ls.builtins.hover.printenv,
         },
         -- https://github.com/nvimtools/none-ls.nvim/wiki/Formatting-on-save#sync-formatting
-        on_attach = function(client, bufnr)
-          if client.supports_method 'textDocument/formatting' then
-            vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
-            vim.api.nvim_create_autocmd('BufWritePre', {
-              group = augroup,
-              buffer = bufnr,
-              callback = function()
-                vim.lsp.buf.format { async = false }
-              end,
-            })
-          end
-        end,
+        -- on_attach = function(client, bufnr)
+        --   if client.supports_method 'textDocument/formatting' then
+        --     vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
+        --     vim.api.nvim_create_autocmd('BufWritePre', {
+        --       group = augroup,
+        --       buffer = bufnr,
+        --       callback = function()
+        --         vim.lsp.buf.format { async = false }
+        --       end,
+        --     })
+        --   end
+        -- end,
       }
 
       -- TODO: update keymap to something more sensible
       vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, { desc = 'Format document' })
     end,
+  },
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
   },
 }
