@@ -1,3 +1,4 @@
+-- TODO: remove since this is built in with nvim 10: https://github.com/ojroques/nvim-osc52?tab=readme-ov-file#nvim-osc52 & https://github.com/neovim/neovim/pull/25872
 return {
   'ojroques/nvim-osc52',
   config = function()
