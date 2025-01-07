@@ -1,4 +1,4 @@
 return {
-  'mg979/vim-visual-multi',
-  version = 'master',
+  -- 'mg979/vim-visual-multi',
+  -- version = 'master',
 }
