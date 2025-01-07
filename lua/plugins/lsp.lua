@@ -98,7 +98,7 @@ return {
         actionlint = {},
         terraformls = {},
         gopls = {},
-        tsserver = {},
+        ts_ls = {},
         lua_ls = {
           settings = {
             Lua = {
